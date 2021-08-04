@@ -36,7 +36,7 @@ Acelya V – acelyavuluvan@gmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-https://github.com/acelyav
+https://github.com/acelyavul
 
 ## Contributing
 
