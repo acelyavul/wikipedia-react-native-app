@@ -19,7 +19,7 @@ WikiSearch is a search engine that has indexed only Wikipedia sites, plus sites 
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/acelyav/WikiSearch.git
+   git clone https://github.com/acelyavul/WikiSearch.git
    ```
 2. Install NPM packages
    ```sh
