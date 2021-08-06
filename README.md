@@ -8,7 +8,7 @@
 ## About The Project!
 
 
-WikiSearch is a search engine that has indexed only Wikipedia sites, plus sites that are linked to from Wikipedia.
+WikiSearch is a search engine project built with React Native and it has indexed only Wikipedia sites, plus sites that are linked to from Wikipedia.
 
 <img src="https://user-images.githubusercontent.com/85767779/127657547-ca4a23af-1cd8-4fcb-8098-4400dddb75d6.png" alt="Logo" width="200" height="350">
 
@@ -19,7 +19,7 @@ WikiSearch is a search engine that has indexed only Wikipedia sites, plus sites 
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/acelyavul/WikiSearch.git
+   git clone https://github.com/acelyavul/wikipedia-react-native-app.git
    ```
 2. Install NPM packages
    ```sh
@@ -28,7 +28,8 @@ WikiSearch is a search engine that has indexed only Wikipedia sites, plus sites 
 
 ## Demo
 
-https://user-images.githubusercontent.com/85767779/127657048-77ac51c9-649e-4de6-91c5-2c67916cfccd.mp4
+https://user-images.githubusercontent.com/88436030/128500051-c5e5647e-438c-4fc9-b14f-0a3df1ab6ca1.mp4
+
 
 ## Meta
 
@@ -36,7 +37,7 @@ Acelya V – acelyavuluvan@gmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-https://github.com/acelyav
+https://github.com/acelyavul
 
 ## Contributing
 
