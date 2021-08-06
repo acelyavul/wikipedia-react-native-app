@@ -11,11 +11,18 @@ import {
 export default function Results({route}) {
   const DATA = route.params.data;
 
+  const filterData = DATA.map(i => {
+    i.snippet = i.snippet
+      .replace(/<span class="searchmatch">(.*?)<\/span>/g, '$1')
+      .replace(/&quot;(.*?)&quot;/g, '$1');
+  });
+
   return (
     <FlatList
       testID="list"
       data={DATA}
       keyExtractor={item => item.pageid.toString()}
+      filterData={filterData}
       renderItem={({item}) => (
         <View style={styles.list}>
           <TouchableOpacity

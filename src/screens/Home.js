@@ -48,7 +48,7 @@ export default function Home({navigation}) {
         value={search}
         placeholder="Type here..."
         placeholderTextColor="midnightblue"
-        onChangeText={setSearch}
+        onChangeText={text => setSearch(text)}
       />
       <TouchableOpacity style={styles.btn} data={data} onPress={onSubmitEdit}>
         <Text style={styles.label} adjustsFontSizeToFit>
