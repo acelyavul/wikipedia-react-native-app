@@ -11,7 +11,7 @@ import {
 export default function Home({navigation}) {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
-  const URL = `https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srlimit=10&srsearch=${search}`;
+  const URL = `https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srlimit=20&srsearch=${search}`;
 
   useEffect(() => {
     const fetchResults = async () => {

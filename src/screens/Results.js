@@ -11,29 +11,31 @@ import {
 export default function Results({route}) {
   const DATA = route.params.data;
 
-  const filterData = DATA.map(i => {
-    i.snippet = i.snippet
-      .replace(/<span class="searchmatch">(.*?)<\/span>/g, '$1')
-      .replace(/&quot;(.*?)&quot;/g, '$1');
-  });
-
   return (
     <FlatList
       testID="list"
       data={DATA}
       keyExtractor={item => item.pageid.toString()}
-      filterData={filterData}
-      renderItem={({item}) => (
-        <View style={styles.list}>
-          <TouchableOpacity
-            onPress={() =>
-              Linking.openURL(`https://en.wikipedia.org/?curid=${item.pageid}`)
-            }>
-            <Text style={styles.header}>{`${item.title}`}</Text>
-          </TouchableOpacity>
-          <Text style={styles.article}>{`${item.snippet}`}</Text>
-        </View>
-      )}
+      renderItem={({item}) => {
+        const filter = DATA.map(i => {
+          i.snippet = i.snippet
+            .replace(/<span class="searchmatch">(.*?)<\/span>/g, '$1')
+            .replace('&quot;', '');
+        });
+        return (
+          <View style={styles.list} filter={filter}>
+            <TouchableOpacity
+              onPress={() =>
+                Linking.openURL(
+                  `https://en.wikipedia.org/?curid=${item.pageid}`,
+                )
+              }>
+              <Text style={styles.header}>{`${item.title}`}</Text>
+            </TouchableOpacity>
+            <Text style={styles.article}>{`${item.snippet}`}</Text>
+          </View>
+        );
+      }}
     />
   );
 }
