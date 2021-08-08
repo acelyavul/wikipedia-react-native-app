@@ -20,7 +20,9 @@ export default function Results({route}) {
         const filter = DATA.map(i => {
           i.snippet = i.snippet
             .replace(/<span class="searchmatch">(.*?)<\/span>/g, '$1')
-            .replace('&quot;', '');
+            .replace(/&quot;(.*?)&quot;/g, '$1')
+            .replace('&quot;', '')
+            .replace('&amp;', '');
         });
         return (
           <View style={styles.list} filter={filter}>
