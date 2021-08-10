@@ -26,24 +26,24 @@ it('should allow change input element', () => {
   expect(input).toBeDefined();
 });
 
-const dataCheck = () => console.log('Checking Data....');
+it('should allow searching by input', () => {
+  const navigation = {navigate: jest.fn()};
+  const {getByTestId, queryAllByText, getByText} = render(
+    <Home navigation={navigation} />,
+  );
+
+  const input = getByTestId('input');
+  const button = getByText('Search');
+  fireEvent.changeText(input, 'ataturk');
+  fireEvent.press(button);
+  const data = queryAllByText('ataturk');
+  expect(data).toBeDefined();
+});
+
+const closeDatabase = () => setTimeout(() => process.exit(), 1000);
 
 describe('Checking Data', () => {
-  beforeEach(() => dataCheck());
-
-  it('should allow searching by input', () => {
-    const navigation = {navigate: jest.fn()};
-    const {getByTestId, queryAllByText, getByText} = render(
-      <Home navigation={navigation} />,
-    );
-
-    const input = getByTestId('input');
-    const button = getByText('Search');
-    fireEvent.changeText(input, 'ataturk');
-    fireEvent.press(button);
-    const data = queryAllByText('ataturk');
-    expect(data).toBeDefined();
-  });
+  afterEach(() => closeDatabase());
 
   it('should render results for Ertan search and navigate to the Results page', () => {
     fetchMock.mockIf(
