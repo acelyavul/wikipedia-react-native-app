@@ -51,7 +51,7 @@ describe('Checking Data', () => {
       () => {
         return {
           // eslint-disable-next-line quotes
-          body: `{"batchcomplete":"","continue":{"sroffset":1,"continue":"-||"},"query":{"searchinfo":{"totalhits":43},"search":[{"ns":0,"title":"Ertan Saban","pageid":52180951,"size":2767,"wordcount":213,"snippet":"ethnic <span class=\"searchmatch\">origin</span>.)&quot;<span class=\"searchmatch\">Ertan</span> Saban: Allah'\u0131n verdi\u011fi kalp her zaman dolu olmal\u0131(The heart that God gives us must always be full)&quot;. &quot;<span class=\"searchmatch\">Ertan</span> Saban Kimdir?&quot;. &quot;<span class=\"searchmatch\">Ertan</span> Saban&quot;","timestamp":"2021-04-28T12:54:37Z"}]}}`,
+          body: `{"batchcomplete":"","continue":{"sroffset":1,"continue":"-||"},"query":{"searchinfo":{"totalhits":43},"search":[{"ns":0,"title":"Ertan Saban","pageid":52180951,"size":2767,"wordcount":213,"snippet":"ethnic <span class="searchmatch">origin</span>.)&quot;<span class="searchmatch">Ertan</span> Saban: Allah'\u0131n verdi\u011fi kalp her zaman dolu olmal\u0131(The heart that God gives us must always be full)&quot;. &quot;<span class="searchmatch">Ertan</span> Saban Kimdir?&quot;. &quot;<span class="searchmatch">Ertan</span> Saban&quot;","timestamp":"2021-04-28T12:54:37Z"}]}}`,
           headers: {
             'content-type': 'application/json; charset=utf-8',
           },

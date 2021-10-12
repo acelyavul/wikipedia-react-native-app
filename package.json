@@ -8,7 +8,7 @@
     "release:android": "cd android && gradlew bundleRelease",
     "release:ios": "react-native run-ios --configuration Release",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --runInBand",
     "lint": "eslint .",
     "lint:fix": "eslint --fix --ext .js,.jsx ."
   },
@@ -18,7 +18,6 @@
     "@react-navigation/stack": "^5.14.5",
     "@testing-library/jest-native": "^4.0.1",
     "@testing-library/react-native": "^7.2.0",
-    "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-native": "0.64.2",
     "react-native-gesture-handler": "^1.10.3",

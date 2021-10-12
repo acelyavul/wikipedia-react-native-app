@@ -31,7 +31,8 @@ export default function Results({route}) {
                 Linking.openURL(
                   `https://en.wikipedia.org/?curid=${item.pageid}`,
                 )
-              }>
+              }
+            >
               <Text style={styles.header}>{`${item.title}`}</Text>
             </TouchableOpacity>
             <Text style={styles.article}>{`${item.snippet}`}</Text>

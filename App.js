@@ -12,7 +12,8 @@ const App = () => {
     <NavigationContainer theme={Theme}>
       <Stack.Navigator
         initialRouteName="Home"
-        screenOptions={{gestureEnabled: false}}>
+        screenOptions={{gestureEnabled: false}}
+      >
         <Stack.Screen
           header={{backgroundColor: 'midnightblue'}}
           name="Home"
