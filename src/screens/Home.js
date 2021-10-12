@@ -19,7 +19,7 @@ export default function Home({navigation}) {
         return;
       }
       try {
-        const response = await fetch(URL, {method: 'get'});
+        const response = await fetch(URL);
         const json = await response.json();
         setData(json.query.search);
       } catch (err) {
