@@ -7,6 +7,7 @@ import {
   Linking,
   StyleSheet,
 } from 'react-native';
+import Colors from '../constants/Color';
 
 export default function Results({route}) {
   const DATA = route.params.data;
@@ -25,7 +26,7 @@ export default function Results({route}) {
             .replace('&amp;', '');
         });
         return (
-          <View style={styles.list} filter={filter}>
+          <View style={styles.item} filter={filter}>
             <TouchableOpacity
               onPress={() =>
                 Linking.openURL(
@@ -46,22 +47,22 @@ export default function Results({route}) {
 const styles = StyleSheet.create({
   article: {
     flexDirection: 'column',
-    marginTop: '3%',
-    marginBottom: '2%',
-    marginHorizontal: '6%',
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: '600',
+    marginBottom: 10,
+    marginHorizontal: 25,
+    marginTop: 12,
   },
   header: {
+    color: Colors.primary,
     flexDirection: 'column',
-    fontSize: 21,
-    color: 'midnightblue',
-    fontWeight: 'bold',
-    marginHorizontal: '6%',
+    fontSize: 20,
+    fontWeight: '700',
+    marginHorizontal: 25,
     textDecorationLine: 'underline',
   },
-  list: {
-    backgroundColor: 'azure',
+  item: {
     alignItems: 'flex-start',
+    backgroundColor: Colors.secondary,
   },
 });

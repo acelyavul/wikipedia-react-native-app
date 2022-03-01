@@ -1,7 +1,12 @@
 {
   "name": "wikisearch",
-  "version": "0.0.1",
-  "private": true,
+  "description": "Wikipedia Mobile App with React Native",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Acelya Vuluvan",
+    "email": "acelyavuluvan@gmail.com"
+  },
   "scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
@@ -9,8 +14,8 @@
     "release:android": "cd android && gradlew bundleRelease",
     "release:ios": "react-native run-ios --configuration Release",
     "test": "jest --runInBand",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix --ext .js,.jsx ."
+    "lint": "eslint -c .eslintrc.json --ext .js .",
+    "lint:fix": "eslint -c .eslintrc.json --ext .js . --fix"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",

@@ -15,10 +15,9 @@ const App = () => {
         screenOptions={{gestureEnabled: false}}
       >
         <Stack.Screen
-          header={{backgroundColor: 'midnightblue'}}
           name="Home"
           component={Home}
-          options={{title: null}}
+          options={{header: () => null}}
         />
         <Stack.Screen
           name="Results"

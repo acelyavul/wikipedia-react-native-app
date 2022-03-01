@@ -1,5 +1,5 @@
 export default {
   colors: {
-    border: 'midnightblue',
+    border: '#191970',
   },
 };

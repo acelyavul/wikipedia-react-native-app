@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {
-  View,
+  SafeAreaView,
   Text,
   TouchableOpacity,
   StyleSheet,
   TextInput,
   Alert,
 } from 'react-native';
+import Colors from '../constants/Color';
 
 export default function Home({navigation}) {
   const [data, setData] = useState([]);
@@ -40,14 +41,14 @@ export default function Home({navigation}) {
   };
 
   return (
-    <View style={styles.pageContainer}>
-      <Text style={styles.pageName}>WikiSearch</Text>
+    <SafeAreaView style={styles.screen}>
+      <Text style={styles.title}>WikiSearch</Text>
       <TextInput
         testID="input"
         style={styles.input}
         value={search}
         placeholder="Type here..."
-        placeholderTextColor="midnightblue"
+        placeholderTextColor={Colors.dark}
         onChangeText={text => setSearch(text)}
       />
       <TouchableOpacity style={styles.btn} data={data} onPress={onSubmitEdit}>
@@ -55,50 +56,47 @@ export default function Home({navigation}) {
           Search
         </Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   btn: {
-    width: '30%',
-    marginTop: 15,
     alignItems: 'center',
-    backgroundColor: 'midnightblue',
-    borderWidth: 3,
-    borderColor: 'midnightblue',
+    backgroundColor: Colors.primary,
+    borderColor: Colors.primary,
     borderRadius: 12,
+    borderWidth: 1,
+    marginTop: 10,
     padding: 5,
+    width: '30%',
   },
   input: {
-    marginTop: 15,
-    borderWidth: 3,
-    borderColor: 'midnightblue',
+    borderColor: Colors.primary,
     borderRadius: 12,
-    width: '80%',
+    borderWidth: 3,
     fontSize: 20,
+    marginBottom: 15,
     paddingLeft: 20,
+    width: '80%',
   },
   label: {
+    color: Colors.white,
+    fontSize: 22,
     justifyContent: 'center',
-    color: 'white',
-    fontSize: 24,
   },
-  listContainer: {
-    backgroundColor: 'azure',
-    alignContent: 'center',
-  },
-  pageContainer: {
+  screen: {
     alignItems: 'center',
-    backgroundColor: 'whitesmoke',
-    flexDirection: 'column',
+    backgroundColor: Colors.secondary,
     flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
   },
-  pageName: {
-    fontSize: 34,
+  title: {
     alignItems: 'center',
+    color: Colors.primary,
+    fontSize: 34,
     fontWeight: 'bold',
-    color: 'navy',
-    marginTop: 50,
+    marginVertical: 40,
   },
 });
