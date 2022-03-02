@@ -15,23 +15,17 @@ export default function Home(props) {
 
   const onSubmitEdit = async () => {
     if (!search) {
-      Alert.alert('No Results Found!');
+      Alert.alert('Please type something...');
       return;
     }
 
     try {
       const response = await fetch(URL);
-
-      if (response.ok) {
-        const json = await response.json();
-        setSearch('');
-        return props.navigation.navigate('Results', {
-          result: json.query.search,
-        });
-      }
-      throw response;
+      const json = await response.json();
+      props.navigation.navigate('Results', {
+        result: json.query.search,
+      });
     } catch (err) {
-      console.log(err);
       Alert.alert('Failed to load... Please check your network connection!');
     }
   };

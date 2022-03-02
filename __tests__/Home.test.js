@@ -16,19 +16,14 @@ describe('Home screen', () => {
   });
 
   it('should allow searching by input', () => {
-    const navigation = {navigate: jest.fn()};
-    const {getByTestId, queryAllByText, getByText} = render(
-      <Home navigation={navigation} />,
-    );
+    const {getByPlaceholderText} = render(<Home />);
 
-    fireEvent.changeText(getByTestId('input'), 'acelya');
-    fireEvent.press(getByText('Search'));
-    const data = queryAllByText('acelya');
-    expect(data).toBeDefined();
+    fireEvent.changeText(getByPlaceholderText('Type here...'), 'acelya');
+    expect(getByPlaceholderText('Type here...').props.value).toBe('acelya');
   });
 
   describe('Checking Data', () => {
-    it('should render results for Ertan search and navigate to the Results page', () => {
+    it.only('should render results for Ertan search and navigate to the Results page', async () => {
       fetchMock.mockIf(
         'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srlimit=1&srsearch=ertan?origin=*',
         () => {
@@ -42,13 +37,22 @@ describe('Home screen', () => {
       );
 
       const navigation = {navigate: jest.fn()};
-      const {getByTestId, getByText} = render(<Home navigation={navigation} />);
+      const spy = jest.spyOn(navigation, 'navigate');
 
-      fireEvent.changeText(getByTestId('input'), 'ertan');
-      fireEvent.press(getByText('Search'));
+      const {getByPlaceholderText, getByText, queryAllByText} = render(
+        <Home navigation={navigation} />,
+      );
+
+      fireEvent.changeText(getByPlaceholderText('Type here...'), 'ertan');
+      await fireEvent.press(getByText('Search'));
+
+      const result = queryAllByText('The heart that God gives us');
+      expect(result).toBeDefined();
+
       expect(fetch).toHaveBeenCalledWith(
         'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srlimit=20&srsearch=ertan',
       );
+      expect(spy).toHaveBeenCalledTimes(1);
     });
   });
 });
