@@ -23,12 +23,24 @@ WikiSearch is a search engine project built with React Native and it has indexed
    ```
 2. Install NPM packages
    ```sh
-   yarn
+   npm i
    ```
+3. Build Android app
+   ```sh
+   npm run android
+   ```
+4. Build IOS app
+   ```sh
+   cd /ios
+   pod install
+   cd ..
+   npm run ios
+   ```
+   
 
 ## Demo
 
-https://user-images.githubusercontent.com/88436030/128500051-c5e5647e-438c-4fc9-b14f-0a3df1ab6ca1.mp4
+
 
 
 ## Meta
