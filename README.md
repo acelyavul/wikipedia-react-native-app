@@ -40,7 +40,7 @@ WikiSearch is a search engine project built with React Native and it has indexed
 
 ## Demo
 
-
+https://user-images.githubusercontent.com/88436030/156372491-574535d8-d39a-49f6-b177-21e6dd78dfbf.mp4
 
 
 ## Meta
@@ -48,5 +48,3 @@ WikiSearch is a search engine project built with React Native and it has indexed
 Acelya V – acelyavuluvan@gmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
-
-https://github.com/acelyavul
