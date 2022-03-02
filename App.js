@@ -10,10 +10,7 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer theme={Theme}>
-      <Stack.Navigator
-        initialRouteName="Home"
-        screenOptions={{gestureEnabled: false}}
-      >
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
           name="Home"
           component={Home}

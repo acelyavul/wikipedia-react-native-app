@@ -1,8 +1,14 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
+    },
+    "ecmaVersion": 12,
+    "babelOptions": {
+      "presets": [
+        "@babel/preset-react"
+      ]
     }
   },
   "env": {
@@ -12,11 +18,19 @@
   },
   "plugins": [
     "react",
-    "react-native"
+    "react-native",
+    "react-hooks",
+    "jest",
+    "flowtype"
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended"
+    "@react-native-community",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jest/recommended",
+    "plugin:react-native/all",
+    "plugin:flowtype/recommended"
   ],
   "rules": {
     "react-native/no-unused-styles": 2,

@@ -1,12 +1,8 @@
-import 'react-native-gesture-handler/jestSetup';
-import {jest} from '@jest/globals';
-
-require('jest-fetch-mock').enableMocks();
-
-jest.mock('react-native-reanimated', () => {
-  const Reanimated = require('react-native-reanimated/mock');
-  Reanimated.default.call = () => {};
-  return Reanimated;
-});
-jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
-jest.useFakeTimers();
+module.exports = {
+  preset: 'react-native',
+  setupFiles: ['./node_modules/react-native-gesture-handler/jestSetup.js'],
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-native|@react-native|@react-native-community|@react-navigation|react-native-gesture-handler|react-native-reanimated))',
+  ],
+  globals: {'babel-jest': {babelConfig: true}},
+};
