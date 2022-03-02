@@ -23,7 +23,7 @@ describe('Home screen', () => {
   });
 
   describe('Checking Data', () => {
-    it.only('should render results for Ertan search and navigate to the Results page', async () => {
+    it('should render results for Ertan search and navigate to the Results page', async () => {
       fetchMock.mockIf(
         'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srlimit=1&srsearch=ertan?origin=*',
         () => {

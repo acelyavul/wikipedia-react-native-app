@@ -127,8 +127,6 @@ exports[`should render App properly 1`] = `
               <View
                 collapsable={false}
                 forwardedRef={[Function]}
-                handlerTag={1}
-                handlerType="PanGestureHandler"
                 needsOffscreenAlphaCompositing={false}
                 onGestureHandlerEvent={[Function]}
                 onGestureHandlerStateChange={[Function]}
@@ -238,6 +236,8 @@ exports[`should render App properly 1`] = `
                               "borderColor": "#191970",
                               "borderRadius": 12,
                               "borderWidth": 1,
+                              "flexDirection": "row",
+                              "justifyContent": "center",
                               "marginTop": 10,
                               "opacity": 1,
                               "padding": 5,
@@ -246,12 +246,10 @@ exports[`should render App properly 1`] = `
                           }
                         >
                           <Text
-                            adjustsFontSizeToFit={true}
                             style={
                               Object {
                                 "color": "#fff",
                                 "fontSize": 22,
-                                "justifyContent": "center",
                               }
                             }
                           >
