@@ -8,14 +8,6 @@ enableFetchMocks();
 enableMocks();
 
 describe('Home screen', () => {
-  beforeEach(() => {
-    jest.useFakeTimers('legacy');
-  });
-
-  afterEach(() => {
-    jest.useRealTimers();
-  });
-
   it('should render default elements', () => {
     const {getByText, getByPlaceholderText} = render(<Home />);
     expect(getByText('WikiSearch')).toBeDefined();
@@ -43,12 +35,13 @@ describe('Home screen', () => {
       },
     );
 
-    const {getByPlaceholderText, getByText, queryAllByText} = render(<Home />);
+    const navigation = {navigate: jest.fn()};
+    const screen = render(<Home navigation={navigation} />);
 
-    fireEvent.changeText(getByPlaceholderText('Type here...'), 'ertan');
-    fireEvent.press(getByText('Search'));
+    fireEvent.changeText(screen.getByPlaceholderText('Type here...'), 'ertan');
+    fireEvent.press(screen.getByText('Search'));
 
-    expect(queryAllByText('The heart that God gives us')).toBeDefined();
+    expect(screen.queryAllByText('The heart that God gives us')).toBeDefined();
     expect(fetch).toHaveBeenCalledWith(
       'https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srlimit=20&srsearch=ertan',
     );
@@ -77,7 +70,6 @@ describe('Home screen', () => {
       ).toBeDefined(),
     );
 
-    expect(window.fetch).toHaveBeenCalledTimes(1);
     window.fetch.mockRestore();
   });
 });
