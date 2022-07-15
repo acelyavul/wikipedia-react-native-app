@@ -52,7 +52,7 @@ WikiSearch is a search engine project built with React Native and it has indexed
 
 ## Demo
 
-https://user-images.githubusercontent.com/88436030/156372491-574535d8-d39a-49f6-b177-21e6dd78dfbf.mp4
+https://user-images.githubusercontent.com/88436030/179229460-5ad72095-18ae-4070-bf5e-846bd84582ef.mp4
 
 
 ## Meta
