@@ -10,7 +10,7 @@
 
 WikiSearch is a search engine project built with React Native and it has indexed only Wikipedia sites, plus sites that are linked to from Wikipedia.
 
-<img src="https://user-images.githubusercontent.com/85767779/127657547-ca4a23af-1cd8-4fcb-8098-4400dddb75d6.png" alt="Logo" width="250">
+<img src="https://user-images.githubusercontent.com/88436030/179201653-a623a6a7-8f13-4f46-a75d-2f96a44e1480.png" alt="Logo" width="250">
 
 
 ## Getting Started
