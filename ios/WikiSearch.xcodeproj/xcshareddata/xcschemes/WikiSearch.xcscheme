@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "WikiSearch.app"
-               BlueprintName = "WikiSearch"
-               ReferencedContainer = "container:WikiSearch.xcodeproj">
+               BuildableName = "wikisearch.app"
+               BlueprintName = "wikisearch"
+               ReferencedContainer = "container:wikisearch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "WikiSearchTests.xctest"
-               BlueprintName = "WikiSearchTests"
-               ReferencedContainer = "container:WikiSearch.xcodeproj">
+               BuildableName = "wikisearchTests.xctest"
+               BlueprintName = "wikisearchTests"
+               ReferencedContainer = "container:wikisearch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "WikiSearch.app"
-            BlueprintName = "WikiSearch"
-            ReferencedContainer = "container:WikiSearch.xcodeproj">
+            BuildableName = "wikisearch.app"
+            BlueprintName = "wikisearch"
+            ReferencedContainer = "container:wikisearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "WikiSearch.app"
-            BlueprintName = "WikiSearch"
-            ReferencedContainer = "container:WikiSearch.xcodeproj">
+            BuildableName = "wikisearch.app"
+            BlueprintName = "wikisearch"
+            ReferencedContainer = "container:wikisearch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -12,33 +12,35 @@
     }
   },
   "env": {
-    "browser": false,
+    "browser": true,
     "es2021": true,
+    "node": true,
+    "commonjs": true,
+    "es6": true,
     "react-native/react-native": true
   },
   "plugins": [
+    "prettier",
     "react",
     "react-native",
-    "react-hooks",
-    "jest",
-    "flowtype"
+    "react-hooks"
   ],
   "extends": [
     "eslint:recommended",
-    "@react-native-community",
+    "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jest/recommended",
-    "plugin:react-native/all",
-    "plugin:flowtype/recommended"
+    "plugin:react-native/all"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
     "react-native/no-inline-styles": 2,
     "react-native/no-color-literals": 2,
     "react-native/no-raw-text": "off",
-    "react/prop-types": "off",
+    "react/prop-types": "warn",
     "react/display-name": "off",
     "react-native/sort-styles": [
       "error",
@@ -47,17 +49,34 @@
         "ignoreClassNames": false,
         "ignoreStyleProperties": false
       }
-    ]
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "no-console": "warn",
+    "no-unused-vars": "warn"
   },
   "overrides": [
     {
       "files": [
         "**/*.test.js",
         "**/*.test.jsx",
-        "jestSetupFile.js"
+        "jest.config.js"
       ],
+      "globals": {
+        "afterAll": true,
+        "afterEach": true,
+        "beforeAll": true,
+        "beforeEach": true,
+        "expect": true,
+        "jest": true,
+      },
       "env": {
-        "jest": true
+        "jest": true,
+      },
+      "rules": {
+        "jest/no-mocks-import": 1
       }
     }
   ]
